@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is a portfolio website created to showcase the skills and projects of a computer science student. The website includes various sections such as an about page, projects showcase, and a contact form.
+This is a portfolio website created to showcase my skills and projects.
 
 ## Project Structure
 
@@ -9,20 +9,13 @@ The project is organized as follows:
 ```
 portfolio-website
 ├── index.html         # Main landing page
-├── about.html         # About the student
-├── projects.html      # Projects showcase
-├── contact.html       # Contact information
 ├── css
 │   ├── style.css      # Main styles
-│   ├── animations.css  # Animation styles
-│   └── responsive.css  # Responsive styles
+│   ├── hero.css       # Hero section Styling
+|   ├── sections.css   # Styling for each section
+│   └── responsive.css  # Responsive styles for different screen
 ├── js
-│   ├── main.js        # Main JavaScript functionality
-│   ├── animations.js   # Animation handling
-│   └── projects.js     # Projects management
-├── assets
-│   ├── fonts          # Font files
-│   └── icons          # Icon files
+│   └── main.js        # Main JavaScript functionality
 ├── .gitignore         # Files to ignore in version control
 └── README.md          # Project documentation
 ```
@@ -33,27 +26,3 @@ portfolio-website
 - **Dynamic Content**: JavaScript is used to load content dynamically, especially in the projects section.
 - **Animations**: CSS animations enhance user experience and engagement.
 
-## Setup Instructions
-
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd portfolio-website
-   ```
-3. Open `index.html` in your web browser to view the website.
-
-## How to Contribute
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them.
-4. Push to your branch and create a pull request.
-
-## License
-
-This project is open-source and available under the MIT License.
