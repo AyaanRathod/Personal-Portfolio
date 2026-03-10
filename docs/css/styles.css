@@ -317,7 +317,32 @@ main {
     transition: transform 0.3s ease;
 }
 
+.bento-project .project-visual {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(140deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border-bottom: 1px solid var(--border-primary);
+    transition: transform 0.3s ease;
+}
+
+.bento-project .project-visual span {
+    font-family: "Grenze", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
 .bento-project:hover img {
+    transform: scale(1.05);
+}
+
+.bento-project:hover .project-visual {
     transform: scale(1.05);
 }
 
