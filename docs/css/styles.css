@@ -1,16 +1,50 @@
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+/* Light */
+:root {
+    --bg: #fafafa;
+    --text: #1a1a1a;
+    --muted: #555;
+    --border: #ddd;
+    --link: #0b57d0;
+    --link-hover: #0842a0;
+    --focus: #0b57d0;
 }
 
-header,
-main,
-footer {
-    max-width: 1000px;
-    width: 100%;
+/* Dark */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f1115;
+        --text: #e8eaed;
+        --muted: #9aa0a6;
+        --border: #2a2f3a;
+        --link: #8ab4f8;
+        --link-hover: #aecbfa;
+        --focus: #8ab4f8;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.page {
+    max-width: 720px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1.25rem 3rem;
 }
 
 /* Header */
@@ -19,485 +53,219 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    margin-bottom: 3rem;
 }
 
-header > a {
-    font-family: "Grenze", serif;
-    font-size: 1.5rem;
+.logo {
     font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
     text-decoration: none;
-    color: var(--color-primary);
 }
 
 nav {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 nav a {
-    color: var(--color-primary);
-    opacity: 0.7;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-nav i {
-    font-size: 1.4rem;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-/* ============================================
-   BENTO GRID LAYOUT
-   ============================================ */
-
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.bento-item {
-    background: var(--background-muted);
-    border: 1px solid var(--border-primary);
-    border-radius: var(--border-radius-large);
-    padding: 1.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.bento-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
-    border-color: var(--border-secondary);
-}
-
-/* ============================================
-   ROW 1: INTRO + LINKS
-   ============================================ */
-
-.bento-intro {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    color: white;
-    padding: 2rem;
-}
-
-.bento-intro h1 {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    color: white;
-}
-
-.bento-intro > p {
-    opacity: 0.95;
-    line-height: 1.6;
-}
-
-.bento-intro .tagline {
-    font-weight: 600;
-    opacity: 0.9;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.bento-links {
-    grid-column: span 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.bento-links a {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    color: var(--color-primary);
+    color: var(--muted);
     text-decoration: none;
-    font-weight: 500;
-    padding: 0.65rem 1rem;
-    border-radius: var(--border-radius-small);
-    background: var(--background-primary);
-    border: 1px solid var(--border-primary);
-    transition: all 0.2s ease;
-}
-
-.bento-links a:hover {
-    border-color: var(--color-link);
-    color: var(--color-link);
-    transform: translateX(4px);
-}
-
-.bento-links i {
-    width: 1.25rem;
-    text-align: center;
-}
-
-/* ============================================
-   ROW 2: EDUCATION + SKILLS
-   ============================================ */
-
-.bento-education {
-    grid-column: span 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.6rem;
-}
-
-.bento-education h2 {
-    font-size: 0.7rem;
-    opacity: 0.5;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.bento-education .school {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.bento-education .edu-logo {
-    height: 40px;
-    width: auto;
-    border-radius: 0.35rem;
-    object-fit: contain;
-}
-
-.bento-education .edu-text h3 {
     font-size: 0.95rem;
-    color: var(--color-primary);
 }
 
-.bento-education .edu-text p {
-    font-size: 0.75rem;
-    opacity: 0.7;
+/* Links: hover + focus */
+a {
+    color: var(--link);
 }
 
-.bento-education .degree {
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    margin: 0.35rem 0 0.75rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0 0 1.25rem;
     font-size: 0.8rem;
-    opacity: 0.75;
-    line-height: 1.4;
-}
-
-/* Skills with table */
-.bento-skills {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.bento-skills h2 {
-    font-size: 0.7rem;
-    opacity: 0.5;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.skills-table {
-    width: 100%;
-    border: none;
-    background: transparent;
-}
-
-.skills-table tr {
-    border-bottom: 1px solid var(--border-primary);
-}
-
-.skills-table tr:last-child {
-    border-bottom: none;
-}
-
-.skills-table td {
-    padding: 0.5rem 0;
-    background: transparent;
-    font-size: 0.85rem;
-    vertical-align: top;
-}
-
-.skills-table .skill-category {
-    font-weight: 700;
-    color: var(--color-link);
-    white-space: nowrap;
-    width: 100px;
-    padding-right: 1rem;
-}
-
-.skills-table tr:hover td {
-    background: transparent;
-}
-
-/* ============================================
-   ROW 3: EXPERIENCE
-   ============================================ */
-
-.bento-experience {
-    grid-column: span 3;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.bento-experience h2 {
-    font-size: 0.7rem;
-    opacity: 0.5;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.exp-entries {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.exp-entry {
-    padding-left: 1rem;
-    border-left: 3px solid var(--gradient-start);
-    transition: border-color 0.2s ease;
-}
-
-.exp-entry:hover {
-    border-left-color: var(--gradient-end);
-}
-
-.exp-entry h3 {
-    font-size: 0.9rem;
-    color: var(--color-primary);
-    font-weight: 700;
-}
-
-.exp-entry .dates {
-    font-size: 0.75rem;
-    color: var(--color-link);
-    font-weight: 500;
-}
-
-.exp-entry p {
-    font-size: 0.8rem;
-    opacity: 0.8;
-    margin-top: 0.25rem;
-    line-height: 1.45;
-}
-
-/* ============================================
-   ROW 4: PROJECTS
-   ============================================ */
-
-.bento-project {
-    grid-column: span 1;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    overflow: hidden;
-}
-
-.bento-project img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    object-position: top left;
-    border-bottom: 1px solid var(--border-primary);
-    transition: transform 0.3s ease;
-}
-
-.bento-project .project-visual {
-    width: 100%;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    text-align: center;
-    background: linear-gradient(140deg, var(--gradient-start), var(--gradient-end));
-    color: white;
-    border-bottom: 1px solid var(--border-primary);
-    transition: transform 0.3s ease;
-}
-
-.bento-project .project-visual span {
-    font-family: "Grenze", serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-}
-
-.bento-project:hover img {
-    transform: scale(1.05);
-}
-
-.bento-project:hover .project-visual {
-    transform: scale(1.05);
-}
-
-.bento-project .project-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    flex-grow: 1;
-}
-
-.bento-project .project-date {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.5;
     font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
 }
 
-.bento-project h3 {
+h3 {
+    margin: 0 0 0.25rem;
     font-size: 1.05rem;
-    color: var(--color-primary);
+    font-weight: 650;
 }
 
-.bento-project .description {
-    font-size: 0.8rem;
-    opacity: 0.8;
-    line-height: 1.45;
-    flex-grow: 1;
+p {
+    margin: 0 0 0.75rem;
 }
 
-.tech-pills {
+.tagline {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.hero p:last-child {
+    margin-bottom: 0;
+    max-width: 38rem;
+}
+
+/* Contact links row */
+.links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-top: 0.25rem;
+    gap: 0.75rem 1.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border);
 }
 
-.tech-pill {
-    padding: 0.15rem 0.5rem;
-    border-radius: 9999px;
-    font-size: 0.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    color: white;
-}
-
-.project-actions {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.project-actions a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.4rem 0.7rem;
-    font-size: 0.75rem;
-    font-weight: 600;
+.links a {
+    font-weight: 500;
     text-decoration: none;
-    color: var(--color-primary);
-    background: var(--background-primary);
-    border: 1px solid var(--border-secondary);
-    border-radius: var(--border-radius-small);
-    transition: all 0.2s ease;
 }
 
-.project-actions a:hover {
-    color: var(--color-link);
-    border-color: var(--color-link);
+.links a:hover {
+    text-decoration: underline;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* Items: projects + experience + education */
+.item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+}
 
+.item:first-of-type {
+    padding-top: 0;
+}
+
+.item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.meta {
+    margin: 0 0 0.35rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.tags {
+    margin: 0.35rem 0 0.65rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.actions {
+    margin: 0.75rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+}
+
+.actions a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+/* Skills */
+.skills-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+.skills-list li:first-child {
+    padding-top: 0;
+}
+
+.skills-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.skill-label {
+    display: inline-block;
+    min-width: 6.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Footer */
 footer {
-    margin-top: auto;
-    text-align: center;
-    opacity: 0.6;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--muted);
 }
 
 footer p {
-    font-size: 0.85rem;
+    margin: 0;
 }
 
 footer a {
-    color: var(--color-link);
+    color: var(--link);
+    text-decoration: none;
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-
-@media (max-width: 768px) {
-    .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .bento-intro { grid-column: span 2; }
-    .bento-links { grid-column: span 2; }
-    .bento-education { grid-column: span 2; }
-    .bento-skills { grid-column: span 2; }
-    .bento-experience { grid-column: span 2; }
-    .bento-project { grid-column: span 1; }
-    
-    .exp-entries {
-        grid-template-columns: 1fr;
-    }
+footer a:hover {
+    text-decoration: underline;
 }
 
-@media (max-width: 500px) {
-    .bento-grid {
-        grid-template-columns: 1fr;
+/* Mobile */
+@media (max-width: 480px) {
+    .page {
+        padding: 1.5rem 1rem 2.5rem;
     }
-    
-    .bento-intro,
-    .bento-links,
-    .bento-education,
-    .bento-skills,
-    .bento-experience,
-    .bento-project {
-        grid-column: span 1;
-    }
-    
-    .bento-intro h1 {
-        font-size: 1.75rem;
-    }
-    
-    header, main, footer {
-        padding: 1.25rem;
-    }
-    
-    .bento-project img {
-        height: 160px;
-    }
-    
-    .exp-entries {
-        grid-template-columns: 1fr;
-    }
-    
-    .skills-table .skill-category {
-        width: 80px;
-    }
-}
 
-/* Smooth scroll & selection */
-html {
-    scroll-behavior: smooth;
-}
+    h1 {
+        font-size: 1.7rem;
+    }
 
-::selection {
-    background: var(--color-link-transparent);
-    color: var(--color-primary);
+    .skill-label {
+        display: block;
+        min-width: 0;
+        margin-bottom: 0.15rem;
+    }
+
+    header {
+        margin-bottom: 2.25rem;
+    }
+
+    section {
+        margin-bottom: 2.5rem;
+    }
 }

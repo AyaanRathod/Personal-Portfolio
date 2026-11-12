@@ -3,266 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayaan Rathod — Software Developer</title>
-    <link rel="Stylesheet" href="./css/fanta.css">
-    <link rel="Stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ayaan Rathod | Software Developer</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header>
-        <a href=".">Ayaan R</a>
-        <nav>
-            <a target="_blank" href="https://github.com/AyaanRathod"><i class="fa-brands fa-github"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/ayaan-rathod/"><i class="fa-brands fa-linkedin"></i></a>
-        </nav>
-    </header>
-    
-    <main>
-        <div class="bento-grid">
-            <!-- Row 1: Intro + Links -->
-            <div class="bento-item bento-intro">
-                <p class="tagline">New Grad · Software Developer · AI Apps</p>
+    <div class="page">
+        <header>
+            <a class="logo" href=".">Ayaan R</a>
+            <nav>
+                <a target="_blank" href="https://github.com/AyaanRathod">GitHub</a>
+                <a target="_blank" href="https://www.linkedin.com/in/ayaan-rathod/">LinkedIn</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <p class="tagline">Software Developer · Brock CS 2026</p>
                 <h1>Hi, I'm Ayaan</h1>
-                <p>CS grad from Brock University. I build web apps and AI tools that solve real problems — like a study helper that cites its sources and a tool that helps instructors catch copied code. Looking for full-time roles in Canada.</p>
-            </div>
+                <p>New Computer Science grad from Brock University, based in Ontario. I build full-stack web apps and automation tools. Looking for full-time new grad roles. Authorized to work in Canada (PGWP, open work permit).</p>
+            </section>
 
-            <div class="bento-item bento-links">
-                <a href="mailto:ayaanrathod466@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-                <a target="_blank" href="https://github.com/AyaanRathod"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a target="_blank" href="https://www.linkedin.com/in/ayaan-rathod/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </div>
+            <section class="links" aria-label="Contact links">
+                <a href="mailto:ayaanrathod466@gmail.com">Email</a>
+                <a target="_blank" href="https://github.com/AyaanRathod">GitHub</a>
+                <a target="_blank" href="https://www.linkedin.com/in/ayaan-rathod/">LinkedIn</a>
+            </section>
 
-            <!-- Row 2: Education + Skills -->
-            <div class="bento-item bento-education">
-                <h2>Education</h2>
-                <div class="school">
-                    <img src="./public/brocku.webp" alt="Brock University" class="edu-logo">
-                    <div class="edu-text">
-                        <h3>Brock University</h3>
-                        <p>2023 – 2026</p>
-                    </div>
-                </div>
-                <p class="degree">Honours B.Sc. CS · Software Engineering, Business Minor</p>
-            </div>
+            <section>
+                <h2>Projects</h2>
 
-            <div class="bento-item bento-skills">
-                <h2>Skills</h2>
-                <table class="skills-table">
-                    <tbody>
-                        <tr>
-                            <td class="skill-category">Frontend</td>
-                            <td>React, Next.js, TypeScript, Vite, Tailwind, Zustand</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-category">Backend</td>
-                            <td>FastAPI, Flask, Node.js, Express, PostgreSQL, Firebase, REST APIs</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-category">AI &amp; Data</td>
-                            <td>IBM watsonx, Gemini API, RAG / BM25, PDF parsing, Azure Document Intelligence</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-category">DevOps</td>
-                            <td>Docker, GitHub Actions, Cloudflare Workers, Agile delivery</td>
-                        </tr>
-                        <tr>
-                            <td class="skill-category">Languages</td>
-                            <td>Python, TypeScript, JavaScript, C, C++, Java, SQL</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Row 3: Experience -->
-            <div class="bento-item bento-experience">
-                <h2>Experience</h2>
-                <div class="exp-entries">
-                    <div class="exp-entry">
-                        <h3>Web Developer — Brock CS Club</h3>
-                        <span class="dates">Oct 2025 – Aug 2026</span>
-                        <p>Redesigned brockcsc.ca, built a merch checkout that took in $1,000+ in sales, and a Next.js and Firebase admin dashboard for 200+ members.</p>
-                    </div>
-                    <div class="exp-entry">
-                        <h3>Project Lead — CodeSimilar</h3>
-                        <span class="dates">Jan 2026 – Present</span>
-                        <p>Led a 7-person team to 1st place (12 teams) building a FIPPA-aware code similarity platform with Winnowing fingerprints, React comparison UI, FastAPI, PostgreSQL, MinIO, and Docker.</p>
-                    </div>
-                    <div class="exp-entry">
-                        <h3>eBay Pathways — via RippleMatch</h3>
-                        <span class="dates">May – Jul 2025</span>
-                        <p>8-week software engineering prep program focused on DSA, system design, and mentorship. Certificate of Achievement.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Row 4: Projects -->
-            <div class="bento-item bento-project">
-                <img src="./public/codesimilar-banner.png" alt="CodeSimilar academic integrity platform">
-                <div class="project-content">
-                    <span class="project-date">COSC 4P02 · 1st Place</span>
+                <article class="item">
+                    <p class="meta">Jan 2026, team capstone, I was team lead</p>
                     <h3>CodeSimilar</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">FastAPI</span>
-                        <span class="tech-pill">React</span>
-                        <span class="tech-pill">PostgreSQL</span>
-                        <span class="tech-pill">Docker</span>
-                    </div>
-                    <p class="description">Helps instructors spot copied C, C++, or Java homework — even when variable names change. Built the Winnowing fingerprint engine and side-by-side match UI for a 7-person team.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/AyaanRathod/Code-Checker"><i class="fa-brands fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
+                    <p class="tags">FastAPI · PostgreSQL · React · TypeScript · Docker</p>
+                    <p>Code similarity checker for instructors: students upload C, C++ or Java, and instructors see similarity scores, clusters and side-by-side matches. I built the core matching engine and the 30-day data cleanup job.</p>
+                    <p class="actions">
+                        <a target="_blank" href="https://github.com/AyaanRathod/Code-Checker">Code</a>
+                    </p>
+                </article>
 
-            <div class="bento-item bento-project">
-                <div class="project-visual"><span>Pathwise AI · watsonx RAG</span></div>
-                <div class="project-content">
-                    <span class="project-date">UNSA Hackathon</span>
+                <article class="item">
+                    <p class="meta">May 2026, hackathon</p>
                     <h3>Pathwise AI</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">FastAPI</span>
-                        <span class="tech-pill">Next.js</span>
-                        <span class="tech-pill">IBM watsonx</span>
-                        <span class="tech-pill">pytest</span>
-                    </div>
-                    <p class="description">Ask a question about your course PDFs and get answers that cite the page. BM25 retrieval plus watsonx generation, with next-course labels (safe / stretch / risky) covered by 25 tests.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/AyaanRathod/UNSA-hackathon"><i class="fa-brands fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
+                    <p class="tags">FastAPI · Next.js · IBM watsonx · Python</p>
+                    <p>Brock course and career path recommender that checks prerequisites, and a study mode that answers questions from course PDFs.</p>
+                    <p class="actions">
+                        <a target="_blank" href="https://github.com/AyaanRathod/UNSA-hackathon">Code</a>
+                    </p>
+                </article>
 
-            <div class="bento-item bento-project">
-                <img src="./public/perkcheck-live.png" alt="PerkCheck student deals site">
-                <div class="project-content">
-                    <span class="project-date">2026 · Live</span>
+                <article class="item">
+                    <p class="meta">2026, solo</p>
                     <h3>PerkCheck</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">HTML/CSS/JS</span>
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">GitHub Actions</span>
-                        <span class="tech-pill">YAML</span>
-                    </div>
-                    <p class="description">103 hand-checked student deals tagged for Canada and the US, with school-email checks in the browser and a nightly bot that flags broken deal pages.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/AyaanRathod/verified-student-perks"><i class="fa-brands fa-github"></i> Code</a>
-                        <a target="_blank" href="https://ayaanrathod.github.io/verified-student-perks/"><i class="fa-solid fa-bolt"></i> Live</a>
-                    </div>
-                </div>
-            </div>
+                    <p class="tags">JavaScript · Python · GitHub Actions · GitHub Pages</p>
+                    <p>Catalog of 103 verified student perks, each tagged with the countries it works in and linked to its official source, with automated link checks.</p>
+                    <p class="actions">
+                        <a target="_blank" href="https://github.com/AyaanRathod/verified-student-perks">Code</a>
+                        <a target="_blank" href="https://ayaanrathod.github.io/verified-student-perks/">Live</a>
+                    </p>
+                </article>
 
-            <div class="bento-item bento-project">
-                <img src="./public/hackcanada.png" alt="CredCheck transcript transfer analyzer">
-                <div class="project-content">
-                    <span class="project-date">HackCanada 2026</span>
-                    <h3>CredCheck</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">React</span>
-                        <span class="tech-pill">TypeScript</span>
-                        <span class="tech-pill">Express</span>
-                        <span class="tech-pill">Gemini API</span>
-                    </div>
-                    <p class="description">Upload a transcript PDF and see which Brock credits would transfer to 5 Ontario universities. Gemini estimates each transfer through an Express proxy so keys stay off the client.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/axk47/HackCanada2026"><i class="fa-brands fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bento-item bento-project">
-                <img src="./public/zakat-calculator.png" alt="Halal Income and Zakat Calculator">
-                <div class="project-content">
-                    <span class="project-date">NIC Hackathon · 2nd Place</span>
+                <article class="item">
+                    <p class="meta">Aug 2026, NICC &quot;Innovating for Barakah&quot; Hackathon</p>
                     <h3>Zakat Calculator</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">pandas</span>
-                        <span class="tech-pill">FastAPI</span>
-                        <span class="tech-pill">React</span>
-                    </div>
-                    <p class="description">Upload income records and get Maliki zakat owed with no hand math. Labels each line Halal, Haram, or Mixed with reasons, checked by 9 pytest tests.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/AyaanRathod/NIC-Hackathon"><i class="fa-brands fa-github"></i> Code</a>
-                        <a target="_blank" href="https://nic-hackathon.vercel.app"><i class="fa-solid fa-bolt"></i> Live</a>
-                    </div>
-                </div>
-            </div>
+                    <p class="tags">FastAPI · pandas · React · TypeScript</p>
+                    <p>Reads an Excel workbook, classifies each transaction and calculates zakat under the Maliki school.</p>
+                    <p class="actions">
+                        <a target="_blank" href="https://github.com/AyaanRathod/NIC-Hackathon">Code</a>
+                        <a target="_blank" href="https://nic-hackathon.vercel.app">Live</a>
+                    </p>
+                </article>
 
-            <div class="bento-item bento-project">
-                <img src="./public/invoice-excel.png" alt="AI Invoice Automation Excel results">
-                <div class="project-content">
-                    <span class="project-date">2026</span>
+                <article class="item">
+                    <p class="meta">Oct 2026, solo</p>
                     <h3>AI Invoice Automation</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">Azure Logic Apps</span>
-                        <span class="tech-pill">Document Intelligence</span>
-                        <span class="tech-pill">Power Automate</span>
-                        <span class="tech-pill">Excel</span>
-                    </div>
-                    <p class="description">Drop a PDF invoice into OneDrive — AI extracts vendor, amount, and due date, writes Excel rows, and routes invoices over $1,000 for approval.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/AyaanRathod/ai-invoice-automation"><i class="fa-brands fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
+                    <p class="tags">Power Automate · Excel Online · Azure Logic Apps · Outlook</p>
+                    <p>Invoice workflow that logs each invoice in Excel and routes bills over $1,000 to a person for approval, then emails a summary.</p>
+                    <p class="actions">
+                        <a target="_blank" href="https://github.com/AyaanRathod/ai-invoice-automation">Code</a>
+                    </p>
+                </article>
+            </section>
 
-            <div class="bento-item bento-project">
-                <img src="./public/StudyBalanceAi.png" alt="StudyBalance AI">
-                <div class="project-content">
-                    <span class="project-date">Sep 2025 · MindHack</span>
-                    <h3>StudyBalance AI</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">Flask</span>
-                        <span class="tech-pill">Arcade.dev</span>
-                    </div>
-                    <p class="description">MindHack runner-up that reads Gmail and Google Calendar through Arcade.dev tool calls to flag a busy week for student wellness.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/AyaanRathod/arcade-hackathon"><i class="fa-brands fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
+            <section>
+                <h2>Experience</h2>
 
-            <div class="bento-item bento-project">
-                <img src="./public/unemployed.png" alt="AI Resume Builder and ATS Checker">
-                <div class="project-content">
-                    <span class="project-date">Feb 2026</span>
-                    <h3>AI Resume Builder &amp; ATS Checker</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">React</span>
-                        <span class="tech-pill">Vite</span>
-                        <span class="tech-pill">Puter.js</span>
-                        <span class="tech-pill">@react-pdf/renderer</span>
-                    </div>
-                    <p class="description">Multi-template resume platform with near 1:1 PDF rendering and a prompt-driven ATS engine that returns structured JSON feedback in real time.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://resume-ayaang.vercel.app/"><i class="fa-solid fa-bolt"></i> Live</a>
-                    </div>
-                </div>
-            </div>
+                <article class="item">
+                    <h3>Web Developer, Brock CS Club</h3>
+                    <p class="meta">Oct 2025 to Aug 2026</p>
+                    <p>Helped redesign brockcsc.ca and moved core pages from AngularJS to React.</p>
+                </article>
 
-            <div class="bento-item bento-project">
-                <img src="./public/Sorting Algorithm.png" alt="Sorting Visualizer">
-                <div class="project-content">
-                    <span class="project-date">Sep 2025</span>
-                    <h3>Sorting Visualizer</h3>
-                    <div class="tech-pills">
-                        <span class="tech-pill">JavaScript</span>
-                        <span class="tech-pill">CSS</span>
-                    </div>
-                    <p class="description">Interactive visualizer for merge sort and bubble sort with audio cues.</p>
-                    <div class="project-actions">
-                        <a target="_blank" href="https://github.com/AyaanRathod/algorithm-visualizer"><i class="fa-brands fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    
-    <footer>
-        <p>Built by <a target="_blank" href="https://github.com/AyaanRathod">Ayaan Rathod</a> · Open to new grad roles across Canada</p>
-    </footer>
+                <article class="item">
+                    <h3>Pathways Program Participant, eBay (via RippleMatch)</h3>
+                    <p class="meta">May to Jul 2025</p>
+                    <p>Software prep program covering data structures, algorithms, system design and mentorship.</p>
+                </article>
+
+                <article class="item">
+                    <h3>Package Handler, Intelcom</h3>
+                    <p class="meta">Jun to Aug 2025</p>
+                    <p>Sorted and loaded packages on a fast-paced early-morning shift in Thorold, ON.</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <article class="item">
+                    <h3>Brock University</h3>
+                    <p class="meta">May 2023 to Aug 2026</p>
+                    <p>Honours BSc Computer Science, Software Engineering, Minor in Business</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li><span class="skill-label">Languages</span> Python, TypeScript, JavaScript, Java, C, C++, SQL</li>
+                    <li><span class="skill-label">Frameworks</span> FastAPI, React, Next.js, Flask</li>
+                    <li><span class="skill-label">Tools</span> PostgreSQL, Docker, Git, GitHub Actions, Power Automate, Azure</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built by <a target="_blank" href="https://github.com/AyaanRathod">Ayaan Rathod</a></p>
+        </footer>
+    </div>
 </body>
 </html>
